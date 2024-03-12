@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mistery Chat</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <h1 class="page-title"> Help your friend cheat on his test </h1>
+
+    <div class="container-card">
+        <div class="card">
+            <ul class="" id="messageZone">
+        
+            </ul>
+        
+            <form id="chatForm">
+                <input type="text" id="inputForm"/>
+            </form>
+        </div>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        const socket = io();
+        const chatForm = document.getElementById("chatForm");
+        const inputForm = document.getElementById("inputForm");
+        const messageZone = document.getElementById("messageZone");
+
+        chatForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            if(inputForm.value){
+                console.log("here");
+                socket.emit('chat message', inputForm.value);
+                inputForm.value = '';
+            }
+        })
+        
+        socket.on('chat message', (msg) => {
+            let li = document.createElement('li');
+            li.textContent = msg;
+            messageZone.appendChild(li);
+            window.scrollTo(0, document.body.scrollHeight);
+        })
+
+    </script>
+</body>
+</html>

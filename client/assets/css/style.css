@@ -1,0 +1,24 @@
+body{
+    background-color: Canvas;
+    color: CanvasText;
+    color-scheme: light dark;
+}
+
+.page-title{
+    text-align: center;
+}
+
+.card{
+    background-color: #424242;
+    border: 3px solid #fffefe;
+    border-radius: 4px;
+    padding: calc(4 * .5rem);
+    margin-top: calc(4 * .5rem);
+    box-shadow: .5rem .5rem 0 white;
+    width: 800px;
+}
+.container-card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
