@@ -1,24 +1,134 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: system-ui, sans-serif;
+    scrollbar-gutter: stable;
+}
+
 body{
-    background-color: Canvas;
-    color: CanvasText;
-    color-scheme: light dark;
+    background-color: #8EC5FC;
+    background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+ }
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
-.page-title{
-    text-align: center;
-}
-
-.card{
-    background-color: #424242;
-    border: 3px solid #fffefe;
-    border-radius: 4px;
-    padding: calc(4 * .5rem);
-    margin-top: calc(4 * .5rem);
-    box-shadow: .5rem .5rem 0 white;
-    width: 800px;
-}
-.container-card{
+main{
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.countDown{
+    color: green;
+}
+
+ /**  PHONE STYLE **/
+ .phone{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 331px;
+    height: 616px;
+    background-color: #1a1a58;
+    border-radius: 30px;
+    padding: 10px;
+ }
+ /**  background-color: rgb(26, 25, 25); **/
+ .phone-screen {
+    width: 328px;
+    height: 600px;
+    background-color: rgb(240, 232, 232);
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+ }
+
+ .topPhone {
+    width: 130px;
+    height: 20px;
+    background-color: #232526;
+    border-radius: 0 0 45px 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.camera{
+    background-color: white;
+    width: 5px;
+    padding: 2px;
+    border-radius: 100%;
+}
+
+.speaker{
+    background-color: white;
+    width: 40px;
+    padding: 2px;
+    border-radius: 20%; 
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(18 ,140, 126);
+    border-radius: 30px 30px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.topPhone{
+    align-self: center;
+}
+
+/**   **/
+.navegationHeaderPhone ul{
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    color: white;
+    gap: 10px;
+}
+
+.chat{
+    border-bottom: 3px solid white;
+}
+
+.tab-screen-section{
+    display: flex;
+    width: 100%;
+    font-size: 10px;
+    justify-content: space-between;
+}
+
+.tab-screen-section li {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.notification-badge{
+    background-color: rgb(219, 219, 219);
+    border-radius: 70px;
+    color: grey;
+    padding: 4px;
+}
+
+/**   **/
+.topBar h2{
+    color: white;
+    font-size: 20px;
+    padding-left: 5px;
 }
